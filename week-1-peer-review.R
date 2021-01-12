@@ -26,7 +26,6 @@ c=data.frame(Animals, Foods)
 table(c$Animals)
 
 # Problem 3
-
 # Use read.csv() to import the survey data included in this assignment. Using that data, make a histogram of the column called "pid7".
 
 
