@@ -1,0 +1,77 @@
+---
+title: "final report excercise"
+author: "chloe"
+date: "1/13/2021"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+Problem 1
+Create a vector of five numbers of your choice between 0 and 10, save that vector to an object, and use the
+sum() function to calculate the sum of the numbers.
+
+```{r p1}
+vec<-seq(1:5)
+sum(vec)
+
+```
+
+Problem 2
+Create a data frame that includes two columns. One column must have the numbers 1 through 5, and the other column must have the numbers 6 through 10. The first column must be named “alpha” and the second column must be named “beta”. Name the object “my_dat”. Display the data.
+
+Put your code and solution here:
+
+```{r p2}
+a=c(1:5)
+b=c(6:10)
+my_dat=data.frame("alpha"=a,"beta"=b)
+my_dat
+```
+
+Problem 3
+Using the data frame created in Problem 2, use the summary() command a create a five-number summary for the column named “beta”.
+
+Put your code and solution here:
+
+```{r p3}
+summary(my_dat$beta)
+
+```
+
+Problem 4
+There is code for importing the example survey data that will run automatically in the setup chunk for this report (Line 13). Using that data, make a boxplot of the Family Income column using the Base R function (not a figure drawn using qplot). Include your name in the title for the plot. Your name should be in the title. Relabel that x-axis as “Family Income”.
+
+Hint: consult the codebook to identify the correct column name for the family income question.
+
+Put your code and solution here:
+```{r p4}
+
+```
