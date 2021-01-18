@@ -46,9 +46,9 @@ cel %>% filter(congress==115) %>%
   ggplot(aes(x=dwnom1,y=all_pass,label=thomas_name))+
   geom_point()+
   ######specify here that you only want the geom_text to apply to a subset of the data
-  geom_text(data=filter(cel,congress==115 & all_pass>8))
+  geom_text (data=filter(cel,congress==115 & all_pass>8))
 
-###install.packages("ggrepel")
+install.packages("ggrepel")
 library(ggrepel)
 
 cel %>% filter(congress==115) %>% 
@@ -63,4 +63,4 @@ cel %>% filter(congress==115) %>%
   annotate("rect",xmin=.05,xmax=.4,ymin=13,ymax=15,alpha=.2,fill="red")+
   annotate("text",x=.6,y=14,label="Most Passed",color="red")
 
-
+?annotate

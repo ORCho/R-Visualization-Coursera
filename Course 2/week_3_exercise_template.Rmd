@@ -1,0 +1,98 @@
+---
+title: "Week 3 Peer Review"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+######DO NOT MODIFY. This will load required packages and data.
+
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+cces <- drop_na(read_csv(url("https://www.dropbox.com/s/ahmt12y39unicd2/cces_sample_coursera.csv?raw=1")))
+
+cel <- drop_na(read_csv(url("https://www.dropbox.com/s/4ebgnkdhhxo5rac/cel_volden_wiseman%20_coursera.csv?raw=1")))
+
+```
+
+Following the directions on the Coursera assignment page, you will make four original visualizations. Note that the data for the CCES and CEL data are imported in code in the R Markdown file.
+
+### Put your name here:Chloe Huang
+
+## Exercise 1
+
+Explain what you are visualizing here:
+A barplot showing the numbers of correspondents based on their religions. 
+
+Put your figure here:
+
+```{r exercise1,echo=FALSE}
+library(ggthemes)
+
+pew_religimp_changed <- recode(cces$pew_religimp,`1`="very Very Important",`2`="Somewhat Important", `3`="Not too Important", `4`="Not at all Important")
+
+cces <- add_column(cces,pew_religimp_changed)
+
+cces %>% ggplot(aes(x=pew_religimp_changed,fill=pew_religimp_changed))+
+  geom_bar(position="dodge")+
+  labs(x="Religion",y="Count")+
+   guides(fill=FALSE)+
+  scale_fill_wsj() + theme_wsj() +
+  annotate("text",x=4,y=320,label="Most Voted",color="Black")
+  
+
+```
+
+## Exercise 2
+
+Explain what you are visualizing here:Congress members Roe Roberts and Pepper, Claude are the two congressmen who have been brought in bills quite a lot. This chart would like to compare the all bills them brought in congress.
+
+Put your figure here:
+
+```{r exercise2,echo=FALSE}
+
+cel_changed_male<-filter(cel, female==0)
+cel_changed_male<-cel_changed_male%>%arrange(desc(cel_changed_male$all_bills))
+
+cel_compare<-filter(cel, thomas_name %in% c("Roe, Robert", "Pepper, Claude"))
+ggplot(cel_compare,(aes(x=congress,y=all_bills,color=thomas_name)))+geom_line()+facet_wrap(~thomas_name)+theme(legend.position="none")
+
+```
+
+## Exercise 3
+
+Explain what you are visualizing here:This Chart Compare the  professional specialty of legislature against the number of bills passed in the 115th congress.
+
+Put your figure here:
+
+```{r exercise3,echo=FALSE}
+library(ggrepel)
+library(RColorBrewer)
+
+
+cel$female_change <- recode(cel$female,`1`="Female",`0`="Male")
+
+cel %>% filter(congress==115) %>% 
+  ggplot(aes(x=state_leg_prof,y=all_pass, color=female_change))+
+  geom_point()+
+  geom_text_repel(data=filter(cel,congress==115 & all_pass>10),mapping=aes(x=state_leg_prof,y=all_pass,label=thomas_name))+scale_color_brewer(name="Gender",palette="Dark2")+ labs(x="Professional",y="Bills Passed")
+
+
+
+
+```
+
+## Exercise 4
+
+Explain what you are visualizing here:
+
+Put your figure here:Compare difference between female and male in terms of family incomes. 
+
+```{r exercise4,echo=FALSE}
+
+cces$gender_changed <- recode(cces$gender,`1`="Male",`2`="Female")
+ggplot(cces,aes(x=faminc_new,fill=gender_changed,color=gender_changed))+
+  geom_histogram( position="identity",alpha=0.5)+theme(legend.title = element_blank(),legend.position="top")+  labs(x="Income Level",y="Number of Family")
+
+```
