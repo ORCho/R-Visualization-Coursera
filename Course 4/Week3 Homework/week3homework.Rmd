@@ -1,0 +1,151 @@
+---
+title: "Homework 3 by Chloe Huang"
+runtime: shiny 
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    theme: yeti
+  
+---
+
+```{r setup, include=FALSE}
+library(shiny)
+##library(shinyWidgets)
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+library(RColorBrewer)
+
+dat<-read.csv("cel_volden_wiseman_coursera.csv")
+```
+
+Page 1 {data-orientation=columns}
+===================================== 
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r echo=FALSE, warning=FALSE}
+
+dat$dem1<-recode(dat$dem, `1`="demoncrat", `0`="republican")
+
+dat1<-filter(dat, year>1980 & all_pass>0)%>%
+  group_by(dem1,year) %>% 
+  summarise("AllPassedBills"=sum(all_pass,na.rm=T))
+
+ggplot(dat1, aes(x = year, y = AllPassedBills, group=dem1, fill=dem1)) +
+   geom_area()+
+  scale_fill_brewer(palette="Set2")+
+  labs(title="Number of Bills Passed since 1980", y = "All Bills Passed", fill = "Party")
+
+```
+
+
+Page 2 {data-orientation=rows}
+=================
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+renderPlotly({
+  
+   dat2<-dat%>% filter(congress==110)
+
+ggplot(dat2, aes(x=votepct, y=all_pass, color=dem1))+
+  geom_point()+
+  geom_smooth(na.rm=TRUE)+
+  scale_color_brewer(palette="Set2") +
+  labs(title="Passage and Vote Pct.,110th Congress", y = "All  Passed", color = "Party")
+
+  
+})
+ 
+
+  
+
+
+
+
+```
+
+### Chart C
+
+```{r}
+
+renderPlotly({
+  
+   dat2<-dat%>% filter(congress==110)
+
+ggplot(dat2, aes(x=dwnom1, y=all_pass, color=dem1))+
+  geom_point()+
+  geom_smooth(na.rm=TRUE)+
+  scale_color_brewer(palette="Set2") +
+  labs(title="Passage and Ideology,110th Congress",x="DW 
+       Nominate", y = "All  Passed", color = "Party")
+})
+
+
+
+```
+
+Page 3
+=================
+
+
+
+inputs {.sidebar } 
+-------------------------------------------
+
+Chart D
+```{r}
+
+state1<-table(dat$st_name)
+state2<-data.frame(state1)
+state3=as.character(state2$Var1)
+
+selectInput( inputId="text_state",
+              label="Select State",
+              choices=state3,
+              selected=state3,
+              multiple=TRUE
+              )
+```
+
+
+
+Column {data-width=650}
+---------------------------------------------
+
+```{r}
+
+renderPlot({
+  
+  dat3<-filter(dat, congress==110 & st_name %in% input$text_state )
+
+  ggplot(dat3,aes(x=all_pass,y=st_name))+
+  geom_bar(stat="identity")
+  
+  })
+
+
+
+```
+
+I tried many times to figure out what kind of input it is, and was stucked at actionGroupButtons. Eventually, after double checking the sameple site, I find that these are selected items instead of buttons. T_T
+
+```{r eval=FALSE, include=FALSE}
+state1<-table(dat$st_name)
+state2<-data.frame(state1)
+state3=as.list(as.character(state2$Var1))
+
+actionGroupButtons(
+  inputIds = as.character(state2$Var1),
+    labels = state3
+    )
+
+```
