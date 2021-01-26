@@ -136,7 +136,7 @@ renderPlot({
 
 ```
 
-I tried many times to figure out what kind of input it is, and was stucked at actionGroupButtons. Eventually, after double checking the sameple site, I find that these are selected items instead of buttons. T_T
+I tried many times to figure out what kind of input it is, and was stuck at actionGroupButtons(). Eventually, after double checking the sample site, I find that these are selected items instead of buttons. T_T
 
 ```{r eval=FALSE, include=FALSE}
 state1<-table(dat$st_name)
