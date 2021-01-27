@@ -1,0 +1,148 @@
+---
+title: "readings"
+author: "chloe"
+date: "1/27/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Adding Best Fit Lines
+This is the section of the R Graphics Cookbook dealing with adding best fit lines to scatter plots.
+
+https://r-graphics.org/recipe-scatter-fitlines
+
+Y​ou will also want to review the ggplot2 documentation for geom_smooth and stat_smooth.
+
+https://ggplot2.tidyverse.org/reference/geom_smooth.html
+
+Drawing Scatterplot Matrices
+T​his excerpt from Rob Kabacoff's Data Visualization with R covers creating a scattplot matrix using ggpairs().
+
+https://rkabacoff.github.io/datavis/Other.html#scatterplot-matrix
+
+Correlation Plots
+T​his excerpt from Rob Kabacoff's book covers creating correlation plots:
+
+https://rkabacoff.github.io/datavis/Models.html#Corrplot
+
+Dot Plots
+T​his excerpt from the R Graphics Cookbook covers Cleveland Dot Plots.
+
+https://r-graphics.org/recipe-bar-graph-dot-plot
+
+T​his page from the R Graph Gallery covers lollipop plots, which are a closely related kind of dot plot.
+
+https://www.r-graph-gallery.com/300-basic-lollipop-plot.html
+
+Shading in a line plot
+T​his excerpt from the R Graphics Cookbook shows how to shade in the area under a line plot using geom_area.
+
+https://r-graphics.org/recipe-line-graph-area
+
+Making a stacked area graph
+T​his excerpt from the R Graphics Cookbook shows how to make a stacked area graph.
+
+https://r-graphics.org/recipe-line-graph-stacked-area
+
+
+Making dumbbell charts
+T​his excerpt from Kabacoff's textbook covers how to make a dumbbell chart:
+
+https://rkabacoff.github.io/datavis/Time.html#dummbbell-charts
+
+Making Alluvial Diagrams
+T​his is the official documentation from Cory Brunson for the ggalluvial package. It includes a vignette on how to make an alluvial diagram.
+
+https://github.com/corybrunson/ggalluvial
+
+
+Packed Circles Figures
+T​he R Graph Gallery has an excellent walkthrough of how to make a simple packed circles figure:
+
+https://www.r-graph-gallery.com/305-basic-circle-packing-with-one-level.html
+
+Pie Charts
+P​ie charts are frowned upon by many data visualization experts, for reasons that are well described here:
+
+https://www.data-to-viz.com/caveat/pie.html
+
+H​owever, if you must make a pie chart, the R Graph Gallery has accessible examples:
+
+https://www.r-graph-gallery.com/131-pie-plot-with-r.html
+
+Wickham Chapter 7
+W​ickham's textbook, ggplot2: Elegant Graphics for Data Analysis has an excellent introduction to spatial figures in Chapter 7. It provides somewhat more detail than what is provided in the lectures.
+
+https://ggplot2-book.org/maps.html
+
+
+R Graph Gallery for Maps
+T​he R Graph Gallery has an extensive set of pages for Maps. For specific examples related to this course, see:
+
+C​horopleth map with R and ggplot2:
+
+https://www.r-graph-gallery.com/327-chloropleth-map-from-geojson-with-ggplot2.html
+
+B​ubble map with ggplot2:
+
+https://www.r-graph-gallery.com/330-bubble-map-with-ggplot2.html
+
+A Note on Data for Simple Features Maps
+The lecture video for this lesson uses data stored on the local computer. Although you will not have to locate any external data to complete the assignments for this course, if you want to access the .shp and .geojson files that the video uses, you can download them at this link. There are multiple files in each folder.
+
+https://www.dropbox.com/sh/yb5cfi9h28veph7/AACjBZNBy3ygKvngEJnFzGKda?dl=0
+
+Make sure you set your working directory in the places indicated in the code example, if you want to follow along exactly with those portions of the video.
+
+Simple Features for R Documentation
+E​dzer Pebesma, the author of the sf package, maintains the official documentation. Much of the package is outside the scope of this course, and this could easily be a full specialization in geospatial data science. However, it is good to know where these resources are located, so it is worthwhile to orient yourself.
+
+https://r-spatial.github.io/sf/index.html
+
+T​he "Articles" section of the website has a guide for getting started. It provides much more detail than is necessary for this course, but is useful background.
+
+https://r-spatial.github.io/sf/articles/sf1.html
+
+F​or a truly comprehensive book on Spatial Data Science, Pebesma offers a textbook at 
+
+https://keen-swartz-3146c4.netlify.app
+
+R​yan Garnett has prepared cheat sheet for sf, but again, many of the functions are outside the scope of this course:
+
+https://github.com/rstudio/cheatsheets/blob/master/sf.pdf
+
+gganimate
+Y​ou can find the official documentation for the gganimate package here. The "Getting Started" section has an excellent introduction to making simple animations, and of course the Reference page has a complete explanation for all of the package functions. You'll want to really read all of this carefully if you want to understand how the gganimate functions work together.
+
+https://gganimate.com/  
+
+A​dditionally, the R Graph Gallery has several nice examples of how to build animations with gganimate:
+
+https://www.r-graph-gallery.com/animation.html
+
+
+Making ggplot figures interactive with ggplotly()
+T​he plotly documention and official website have an excellent series of examples for how to convert ggplot figures to plotly interactive figures, covering nearly every kind of ggplot figure we have created. Take a few minutes and check out a few of these examples. You'll find it's rather straightforward.
+
+https://plotly.com/ggplot2/  
+
+I​f you are inclined to learn more about plotly and want to self-study, the rest of the website is also excellent.
+
+https://plotly.com/r/  
+
+Animating ggplot figures with ggplotly
+T​his excerpt from Carson Sievert's book, Interactive web-based data visualization with R, plotly, and shiny, does an excellent job of demonstrating how to make a ggplot figure animated using ggplotly.
+
+https://plotly-r.com/animating-views.html
+
+
+
+
+
+
+

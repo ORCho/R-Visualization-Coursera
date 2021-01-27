@@ -1,0 +1,128 @@
+---
+title: "readings"
+author: "chloe"
+date: "1/27/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+The RStudio Cheat Sheet
+The link below will take you to the RStudio Cheat Sheet. This is a very concise explanation of many of the different tools in RStudio. You don't need to learn everything on this sheet, but it is helpful to orient you to RStudio. If you have any questions about any of the menus or buttons in RStudio, this is likely to give you the answer you need.
+
+Review this carefully as you orient yourself with RStudio. I would take at least 20 minutes to do this.
+
+https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf
+
+T​his Cheat Sheet was created by RStudio staff and is distributed by RStudio.
+
+
+R for Data Science, Chapter 4
+In this chapter of their textbook, Wickham and Grolemund walk through some of the basic R commands we covered. Read it here to check your understanding. You should also get comfortable reading this text, because we will come back to it again in this course (and even more if you go on to other courses in this specialization).
+
+https://r4ds.had.co.nz/workflow-basics.html
+
+R​ For Data Science, Garrett Grolemund and Hadley Wickham. Grolemund and Wickham maintain a free to use version of this text at the linked website. A physical copy of the text is available through O'Reilly. Further information can be found at https://r4ds.had.co.nz/
+
+A Note on File Paths
+In the next video, we are going to talk about setting your working directory in R and file paths. 
+
+The instructor is using R Studio on a Windows PC.  Everything should still work on a Mac without any problems, but you do need to be aware of the differences between file paths on Windows and Mac.
+
+So, for example, on a Windows PC, a file path might look like this:
+
+"C:/Dropbox/data_viz_coursera"
+
+On a Mac, a file path in R might look like this:
+
+"/Users/Collin/Dropbox/data_viz_coursera"
+
+If you are on a Mac and having trouble typing in paths, in the top menu bar, click Session --> Set Working Directory --> Choose Directory and then browse to the folder where your file is located. This will set the working directory and show you the path to the folder you select. 
+
+This is explained in the video, but to avoid confusion it is helpful to mention it here.
+
+Good luck!
+
+CCES Data
+I​n the videos and exercises to come, you will be working with some data from the Cooperative Congressional Election Study, a major academic survey about American politics. We are working with a random sample of this data from the 2019 study. I have slightly modified these data for teaching purposes. If you want to do any actual analysis with these data, you should download the original data files from the CCES website.
+
+Ansolabehere, Stephen; Schaffner, Brian; Luks, Samantha, 2020, "CCES Common Content, 2019", https://doi.org/10.7910/DVN/WOT7O8, Harvard Dataverse, V1, UNF:6:34vNKfe/vAMemliFcOkbvw== [fileUNF]
+
+
+Cookbook for R: Basic Plots
+These links go to pages in the Cookbook for R by Winston Chang. They explain how to make several basic kinds of plots in R. You should read through each of these carefully, even running the code that they use in the examples in your own RStudio script. The Cookbook is another great resource that we will come back to again later in this specialization.
+
+These pages go into some additional detail on how to use these functions beyond what is included in the video, including how to make boxplots using categorical data and how to add regression lines to scatterplots. These are more advanced functions than what we cover in this course, but this is often the case when learning R. Some of the functions have more advanced tools in them that you don't have to learn right away. It's important to not get distracted when trying read this kind of documentation - focus on the parts that relate to what you need to know to finish your specific task, not trying to understand everything at once.
+
+http://www.cookbook-r.com/Graphs/Histogram_and_density_plot/
+
+http://www.cookbook-r.com/Graphs/Box_plot/  
+
+http://www.cookbook-r.com/Graphs/Scatterplot/  
+
+
+R for Data Science, Chapter 5
+Chapter 5 of R for Data Science provides a walkthrough of the functions that were demonstrated in the video. Now that you have seen these functions in action, go back now and read these materials, possibly in conjunction with viewing the videos again.
+
+https://r4ds.had.co.nz/transform.html
+
+
+Data Wrangling Cheat Sheet
+The Data Wrangling Cheat Sheet provides a very concise explanation of the functions we have been using so far, plus some additional functions. Try out these functions with sample data, perhaps the mtcars or iris datasets built into R. You can load those datasets into R using data(mtcars) and data(iris). Practice makes perfect!
+
+https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf
+
+T​his Cheat Sheet was created by the RStudio team and is located at Garrett Grolemund's Github page.
+
+
+Getting Started with dplyr
+The reference page for dplyr on the tidyverse page provides another great walkthrough of the tidyverse functions. Read this carefully for understanding, running the example code on your own computer as you go.
+
+https://dplyr.tidyverse.org/articles/dplyr.html
+
+Learning to Read R Documentation
+Now that you have some experience using the functions in the tidyverse, you should start to get some practice finding and reading R documentation for different functions. These two links will take you to the technical documentation for many of the functions we have used so far, plus some additional materials on two-table verbs. One-table verbs manipulate the data in a single table, and two-table verbs are about combining (merging) tables together.
+
+Read these materials carefully, thinking about what we have learned so far. You may want to try some of the new functions on your own, based on the examples in the documentation.
+
+https://dplyr.tidyverse.org/reference/index.html#section-one-table-verbs
+
+https://dplyr.tidyverse.org/reference/index.html#section-two-table-verbs
+
+Note on Previewing Figures in R Markdown
+In the videos, when the instructor is working in an R Markdown file, the plots will appear in the plot pane in R Studio. 
+
+Your R Studio session may be set up for your output to be previewed inline (underneath your code in the editing pane). To force your plot to appear in the Preview Pane, in R Studio, in the "Tools" menu in the top menu bar, select "Global Options". From there, find the R Markdown section. Uncheck the highlighted box below, and this should cause the preview to appear in the plot pane.
+
+
+
+R for Data Science, Chapter 27
+This is the section in R for Data Science that covers R Markdown. It provides a more detailed walkthrough of the material we covered in the lectures. Read this to check your understanding.
+
+https://r4ds.had.co.nz/r-markdown.html
+
+
+R Markdown Cheat Sheet
+Like the other cheat sheets we have seen, the R Markdown cheatsheet provides a very concise reference guide to R Markdown. This covers some content we have seen, and some more advanced concepts. Don't worry that we haven't covered everything here - just read to reinforce what we have covered and to remember that this quick reference is available to you.
+
+https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf
+
+T​his Cheat Sheet was created by the RStudio team.
+
+
+
+R Markdown Reference Guide
+The R Markdown Reference Guide is the official documentation for R Markdown. You do not need to read all of this, but you should spend some time reviewing it and familiarizing yourself with this as reference material.
+
+https://rmarkdown.rstudio.com/lesson-1.htm
+
+
+R Markdown: The Definitive Guide
+https://bookdown.org/yihui/rmarkdown/basics.html  
+
+This is a selection from the much longer e-book, R Markdown: The Definitive Guide by Xie, Allaire, and Grolemund. The section on "Basics" provides excellent background information. The material in parts 2.1 - 2.6 should be mostly review of what we have covered. You should review what you have learned and acquaint yourself with this great reference tool. 
+

@@ -1,0 +1,80 @@
+---
+title: "readings"
+author: "chloe"
+date: "1/27/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Adding Best Fit Lines
+This is the section of the R Graphics Cookbook dealing with adding best fit lines to scatter plots.
+
+https://r-graphics.org/recipe-scatter-fitlines
+
+Y​ou will also want to review the ggplot2 documentation for geom_smooth and stat_smooth.
+
+https://ggplot2.tidyverse.org/reference/geom_smooth.html
+
+Drawing Scatterplot Matrices
+T​his excerpt from Rob Kabacoff's Data Visualization with R covers creating a scattplot matrix using ggpairs().
+
+https://rkabacoff.github.io/datavis/Other.html#scatterplot-matrix
+
+Correlation Plots
+T​his excerpt from Rob Kabacoff's book covers creating correlation plots:
+
+https://rkabacoff.github.io/datavis/Models.html#Corrplot
+
+
+Dot Plots
+T​his excerpt from the R Graphics Cookbook covers Cleveland Dot Plots.
+
+https://r-graphics.org/recipe-bar-graph-dot-plot
+
+T​his page from the R Graph Gallery covers lollipop plots, which are a closely related kind of dot plot.
+
+https://www.r-graph-gallery.com/300-basic-lollipop-plot.html
+
+Shading in a line plot
+T​his excerpt from the R Graphics Cookbook shows how to shade in the area under a line plot using geom_area.
+
+https://r-graphics.org/recipe-line-graph-area
+
+Making a stacked area graph
+T​his excerpt from the R Graphics Cookbook shows how to make a stacked area graph.
+
+https://r-graphics.org/recipe-line-graph-stacked-area
+
+
+
+Making dumbbell charts
+T​his excerpt from Kabacoff's textbook covers how to make a dumbbell chart:
+
+https://rkabacoff.github.io/datavis/Time.html#dummbbell-charts
+
+
+
+Making Alluvial Diagrams
+T​his is the official documentation from Cory Brunson for the ggalluvial package. It includes a vignette on how to make an alluvial diagram.
+
+https://github.com/corybrunson/ggalluvial
+
+Packed Circles Figures
+T​he R Graph Gallery has an excellent walkthrough of how to make a simple packed circles figure:
+
+https://www.r-graph-gallery.com/305-basic-circle-packing-with-one-level.html
+
+
+Pie Charts
+P​ie charts are frowned upon by many data visualization experts, for reasons that are well described here:
+
+https://www.data-to-viz.com/caveat/pie.html
+
+H​owever, if you must make a pie chart, the R Graph Gallery has accessible examples:
+
+https://www.r-graph-gallery.com/131-pie-plot-with-r.html
+
+

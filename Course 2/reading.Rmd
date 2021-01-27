@@ -1,0 +1,164 @@
+---
+title: "reading"
+author: "chloe"
+date: "1/27/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+Wickham et al, Chapters 1 and 2
+These sections of ggplot2: Elegant Graphics for Data Analysis provide an important introduction to the ggplot approach for generating graphics.
+
+https://ggplot2-book.org/introduction.html  
+
+This is an online version of ggplot2: Elegant Graphics for Data Analysis by Hadley Wickham, Danielle Navarro, and Thomas Lin Pederson. Wickham makes the source code for the book available on his Github page, with the compiled version available at the link above. A physical copy of a previous edition is available as a Springer publication.
+
+
+ggplot Cheat Sheet
+Like the other cheat sheets we have seen, the ggplot cheatsheet provides a very concise reference guide to ggplot. This covers some content we have seen, and some more advanced concepts. Don't worry that we haven't covered everything here - just read to reinforce what we have covered and to remember that this quick reference is available to you.
+
+https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf  
+
+This Cheat Sheet was developed by the RStudio team.
+
+ggplot2 Overview and Reference
+The official documention to ggplot2 is extremely useful, providing a quick introduction to ggplot and a comprehensive inventory, explanation, and demonstration of ggplot2 commands. You don't need to read all of this right now, but you should familiarize yourself with it and be prepared to refer to if you need to clarify how something works.
+
+https://ggplot2.tidyverse.org/index.html  
+
+https://ggplot2.tidyverse.org/reference/index.html  
+
+R Graphics Cookbook - Scatter Plots
+The R Graphics Cookbook by Winston Chang is a very valuable quick reference for many different graphics creation tasks. It contains the same basic material as the ggplot documentation, but in a different format that may be easier for some learners to use. Again, you should not read these to retain all of the details, but rather to help you get acquainted with available reference materials.
+
+https://r-graphics.org/chapter-scatter
+
+https://r-graphics.org/recipe-quick-scatter
+
+https://r-graphics.org/recipe-scatter-basic-scatter
+
+https://r-graphics.org/recipe-scatter-grouped-scatter
+
+https://r-graphics.org/recipe-scatter-overplot
+
+Winston Chang makes the 2nd edition of the R Graphics Cookbook available online. A physical copy is published by O'Reilly.
+
+Sample Data
+I​n the videos and exercises to come, you will be working with some data from the Cooperative Congressional Election Study, a major academic survey about American politics. We are working with a random sample of this data from the 2019 study. I have slightly modified these data for teaching purposes. If you want to do any actual analysis with these data, you should download the original data files from the CCES website.
+
+Ansolabehere, Stephen; Schaffner, Brian; Luks, Samantha, 2020, "CCES Common Content, 2019", https://doi.org/10.7910/DVN/WOT7O8, Harvard Dataverse, V1, UNF:6:34vNKfe/vAMemliFcOkbvw== [fileUNF]
+
+We will also be working with data from the Center for Effective Lawmaking, a research project spearheaded by Alan Wiseman (Vanderbilt University) and Craig Volden (University of Virginia). As with the CCES data, I have slightly modified these data for teaching purposes. To do original analysis, download the original data files from the Center's webpage.
+
+https://thelawmakers.org/data-download
+
+R Graphics Cookbook - Histograms
+These are recipes for histograms from Winston Chang's R Graphics Cookbook:
+
+https://r-graphics.org/recipe-quick-histogram
+
+https://r-graphics.org/recipe-distribution-basic-hist#RECIPE-DISTRIBUTION-BASIC-HIST
+
+https://r-graphics.org/recipe-distribution-multi-hist#RECIPE-DISTRIBUTION-MULTI-HIST
+
+
+R Graphics Cookbook - Box Plots
+These are recipes for box plots from Winston Chang's R Graphics Cookbook:
+
+https://r-graphics.org/recipe-quick-boxplot
+
+https://r-graphics.org/recipe-distribution-basic-boxplot
+
+
+R Graphics Cookbook - Making a Density Plot
+These are recipes for density plots from Winston Chang's R Graphics Cookbook:
+
+https://r-graphics.org/recipe-distribution-basic-density
+
+
+R Graphics Cookbook - Making a Violin Plot
+These are recipes for Violin Plots from Winston Chang's R Graphics Cookbook:
+
+https://r-graphics.org/recipe-distribution-violin#RECIPE-DISTRIBUTION-VIOLIN
+
+
+Bar plots in the R Graph Gallery
+The R Graph Gallery is another excellent resource for learning different figure types. This is the page that covers bar plots in ggplot2. You may want to familiarize yourself with other pages on this site - we will come back to it later.
+
+Cookbook for R - Bar and line graphs
+These are recipes for bar and line plots from Winston Chang's R Graphics Cookbook:
+
+(this is from the first edition, whereas other links have been from the second edition)
+
+http://www.cookbook-r.com/Graphs/Bar_and_line_graphs_(ggplot2)/  
+
+https://www.r-graph-gallery.com/218-basic-barplots-with-ggplot2.html  
+
+
+R Graphics Cookbook - Line Graphs
+These are recipes for line plots from Winston Chang's R Graphics Cookbook.
+
+https://r-graphics.org/recipe-quick-line
+
+https://r-graphics.org/recipe-line-graph-basic-line
+
+https://r-graphics.org/recipe-line-graph-multiple-line
+
+https://r-graphics.org/recipe-line-graph-line-appearance
+
+R Graph Gallery
+This is the R Graph Gallery page for making heat maps with ggplot2.
+
+https://www.r-graph-gallery.com/79-levelplot-with-ggplot2.html  
+
+
+
+Wickham et al, Chapter 8
+Chapter 8 of ggplot2: Elegant Graphics for Data Analysis provides an excellent deeper look at how to create annotations. Some of this material is more advanced than what is presented in the lecture videos, but even those methods should be accessible to you if you master what the videos cover.
+
+https://ggplot2-book.org/annotations.html  
+
+
+
+Wickham et al, Chapter 10
+Chapter 10 will read like a review for you at this point if you have been following along with the videos, but it will be useful to you now as a way to review the grammar of graphics.
+
+ttps://ggplot2-book.org/mastery.html  
+
+
+Wickham et al, Chapter 16
+https://ggplot2-book.org/polishing.html
+
+C​hapter 16 of the Wickham et al. text provides a detailed walkthrough of the Theme function.
+
+ggplot2 Themes Documentation
+As with other parts of the site, the ggplot2 documentation has a very well presented explanation for how themes work in ggplot2.
+
+https://ggplot2.tidyverse.org/reference/index.html#section-themes  
+
+https://ggplot2.tidyverse.org/reference/ggtheme.html  
+
+ggthemes Gallery
+This page has a very strange name, but it is an extremely useful visual inventory of different themes included in the ggthemes package. You should get oriented to this page so you know what the different themes look like.
+
+https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/  
+
+Download Page for Inkscape
+https://inkscape.org/release/inkscape-1.0/
+
+T​he download page for Inkscape has a link to a get a copy of the software for multiple operating systems. Install on your computer to follow along with the videos.
+
+
+Inkscape Tutorial Parts 1-3
+Under the "help" menu in the Inkscape menu bar, you will find a section called "Tutorials". The first three tutorials, "Basics", "Shapes", and "Advanced", are good places to begin if you want to deepen you knowledge of Inkscape. You should not view this as required for this course, but it is helpful for when you start using Inkscape for future work.
+
+Inkscape Manual Quick Start Section
+The Inkscape Manual is an extremely useful document that provides a straightforward reference for Inkscape. The Quick Start section provides a walkthrough of several examples. These materials are more focused on drawing new figures than modifying existing figures, so they are more comprehensive than what is really needed for small tweaks to ggplot2 figures, as we do in this course.
+
+http://tavmjong.free.fr/INKSCAPE/MANUAL/html/index.html  
