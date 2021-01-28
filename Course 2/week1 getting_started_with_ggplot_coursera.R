@@ -49,6 +49,9 @@ ggplot(fig115,aes(x=seniority,y=all_pass,color=dem))+
   geom_jitter()+
   labs(x="Seniority",y="Bills Passed",title="Seniority and Bills Passed in the 115th Congress")
 
+
+####ggplot(fig115,aes(x=seniority,y=all_pass,color=factor(dem)))+geom_jitter()+labs(x="Seniority",y="Bills Passed",title="Seniority and Bills Passed in the 115th Congress")
+
 ####colors are strange, let's fix
 
 #####make dem a categorical variable called "party"

@@ -1,0 +1,125 @@
+R for Data Science, Data Import
+This chapter from Wickham and Grolemund's R for Data Science provides an overview of how to import data using the readr package. In particular, it provides a litte more information about parsing data at the import stage, but generally the readr functions do a pretty good job of this, and you won't frequently need to use these options. The main thing to know is that there are several different functions for reading different common file types, so be aware of what these are when you are searching for open data.
+
+https://r4ds.had.co.nz/data-import.html
+
+
+Data Import Cheat Sheet
+The data import cheat sheet from RStudio is a quick reference guide. If you encounter a problem importing data into R, this is the first document you should pull up for help. 95% of the problems you encounter importing data will be resolved by reading this carefully. 
+
+Note that the "Reshape Data" section of this cheat sheet is a bit out of date. gather() and spread() have been replaced by pivot_longer and pivot_wider, so don't be confused when you see this section.
+
+https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf
+
+
+nathan Few
+Alberto Cairo
+Nigel Holmes
+Donald Norman
+Donis Dondis
+
+R Graph Gallery
+We've used the R Graph Gallery before, but I'm including it here as a reminder. If you trying to brainstorm what type of figure to use with your data, a great idea is to scroll through the home page. This provides a stylized gallery of different figure types, grouped together by the type of comparisons that are appropriate for each type of figure. A quick skim can be a great source of ideas if you want to add some variety to your project.
+
+https://www.r-graph-gallery.com/
+
+UC Berkeley Data Viz Guide
+The guide, produced by the University of California's library system, provides a good set of handy tips and best practices when making visualizations. It also provides links to additional resources that you might want to review. In particular, the section on Choosing a Chart Type can be helpful when you are thinking about different ways to visualizing your data. There are lots of great tips spread throughout the page, which makes it very much worth your time to review.
+
+https://guides.lib.berkeley.edu/data-visualization/about
+
+Duke University, Data Viz Guide
+This guide from the Duke University library system provides an additional set of links and resources on data visualization best practices. I include this guide specifically for the section on Visualization Types, which provides another useful gallery of figure varieties that you might use for inspiration when designing your final project.
+
+https://guides.library.duke.edu/c.php?g=289678&p=1930713
+
+Healy, Chapter 1
+Kieran Healy, a sociologist at Duke University, has written a tremendous textbook on data visualization. He maintains a draft version of the text online at the website below, and you can buy a digital or physical copy of the textbook (I strongly recommend you do). An electronic version is available on Amazon, and physical copies are published through Princeton University Press.
+
+The link below will take you to a draft version of Chapter 1 of the textbook. Pay particular attention to the section on "Channels for representing data" and the accompanying figure.
+
+https://socviz.co/lookatdata.html#lookatdata
+
+
+Clause Wilke text, Chapters 4 and 5
+Claus Wilke is a researcher at the University of Texas at Austin. He's written across many scientific disciplines, from physics to virology. He also assembled a wonderful textbook compiling his best practices in data visualization. The book is available in digitial or physical versions and is published by O'Reilly.
+
+The text is rather dense, but I would endorse especially Chapter 4 on color scales and Chapter 5, his directory of visualizations. The subsequent Chapters 6-16 provide much more detail about each entry of the directory. This is another outstanding resource if you trying to pick visualization and working to fine tune your plots. 
+
+https://clauswilke.com/dataviz/index.html
+
+EEA Guide
+The European Environment Agency has done a great job assembling a list of "dos and don'ts" for your data visualizations.
+
+I would think about this as a checklist. Looking at your visualization, have you avoided the don'ts and followed the dos listed here? If so, you are likely making a great visualization.
+
+    https://www.eea.europa.eu/data-and-maps/daviz/learn-more/chart-dos-and-donts
+    
+    Junk Charts
+  https://junkcharts.typepad.com/
+
+    Junkcharts is a bit of a hall of shame for bad visualizations. It's interesting to peruse and see what kinds of criticisms others have made of visualization "in the wild." 
+
+
+stringr Cheat Sheet
+The stringr Cheat Sheet from R Studio is, like all cheat sheets, your first go-to for functions in that package.
+
+https://github.com/rstudio/cheatsheets/blob/master/strings.pdf
+
+
+Getting Started with stringr
+The stringr reference page provides specific technical help with package functions.
+
+https://stringr.tidyverse.org/articles/stringr.html
+
+
+R for Data Science, Strings
+Wickham and Grolemund provide additional coverage of strings in R for Data Science. In particular, you might want to review the short section on Regular Expressions, if you want a little more context for how these work.
+
+https://r4ds.had.co.nz/strings.html
+
+
+
+Peng, R Programming for Data Science, Regular Expressions
+https://bookdown.org/rdpeng/rprogdatascience/regular-expressions.html
+
+Roger Peng's R Programming for Data Science is an excellent text generally, but here I highlight the chapter on Regular Expressions, again if you think there is a situation where you need to apply these in your own work.
+
+
+R for Data Science, Ch. 16
+R for Data Science covers dates and times in Chapter 16. You should review this in tandem with the cheat sheet.
+
+https://r4ds.had.co.nz/dates-and-times.html
+
+
+Lubridate Cheat Sheet
+Again, the R Studio team provides all the basic information you need about Lubridate in its cheat sheet.
+
+https://rawgit.com/rstudio/cheatsheets/master/lubridate.pdf
+
+
+Lubridate Reference, Intro
+The Lubridate reference page is of course a good resource. I would especially consider working through the code in the "Intro" section, which provides a nice illustration of some more advanced features.
+
+https://lubridate.tidyverse.org/articles/lubridate.html
+
+R for Data Science, Factors
+Unsurprisingly, I recommend you read the chapter in R for Data Science on factors to complement that basic introduction from the video. As with the video, the main focus here is reordering and renaming levels of factors to get your visualizations to work the way you intend.
+
+https://r4ds.had.co.nz/factors.html
+
+Introduction to forcats
+This is the introduction to forcats from the tidyverse reference page. The new material here is in the section on "Combining Levels", which you might want to review if you have a column of categorical data with many different values. 
+
+https://forcats.tidyverse.org/articles/forcats.html
+Relational Data
+The chapter on Relational Data in R for Data Science provides a more technical walkthrough of key values and joins. You may want to pay special attention to the problem of duplicated keys.
+
+https://r4ds.had.co.nz/relational-data.html
+
+R for Data Science, Tidy Data
+As I've mentioned, understanding what "tidy data" means can be a little difficult if you are new to using R. Wickham and Grolemund do a good job of walking through this very carefully in this chapter of R for Data Science.
+
+https://r4ds.had.co.nz/tidy-data.html
+
+

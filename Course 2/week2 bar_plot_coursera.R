@@ -19,7 +19,9 @@ cel %>% filter(congress==115) %>% ggplot(aes(x=st_name))+geom_bar()
 
 ###flip the figure by setting y aesthetic rather than the x
 
-cel %>% filter(congress==115) %>% ggplot(aes(y=st_name))+geom_bar()
+cel %>% filter(congress==115) %>% ggplot(aes(y=st_name, group=female, fill=female))+geom_bar()
+
+cel %>% filter(congress==115) %>% ggplot(aes(y=st_name, group=female, fill=female))+geom_bar()
 
 ###let's go back and recode the dem variable to be a categorical variable
 
@@ -69,7 +71,7 @@ banana <- rep("banana",1)
 ###put together the fruits in a dataframe
 ###creates a single columns with fruits
 fruit_bowl <- tibble("fruits"=c(apple,orange,banana))
-n(fruit_bowl)
+
 ########Let's calculate proportions instead
 
 #####create a table that counts fruits in a second column

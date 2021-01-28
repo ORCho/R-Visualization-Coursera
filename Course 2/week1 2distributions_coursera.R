@@ -8,11 +8,16 @@ cces<- read_csv(url("https://www.dropbox.com/s/ahmt12y39unicd2/cces_sample_cours
 ggplot(cces,aes(y=faminc_new))+geom_boxplot()
 
 ####break up boxplots by education group -- add a aesthetic mapping for group
-ggplot(cces,aes(y=faminc_new,group=educ))+
+ggplot(cces,aes(y=faminc_new,group=educ, fill=educ))+
   geom_boxplot()
 
 ####add labels and a title
-ggplot(cces,aes(y=faminc_new,group=educ))+
+ggplot(cces,aes(y=faminc_new,group=educ, fill=educ))+
+  geom_boxplot()+
+  labs(x="Income Level",y="Family Income",title="Family Inc. by Respondent Ed. Level")
+
+
+ggplot(cces,aes(x=factor(educ), y=faminc_new))+
   geom_boxplot()+
   labs(x="Income Level",y="Family Income",title="Family Inc. by Respondent Ed. Level")
 
@@ -29,8 +34,8 @@ ggplot(cces,aes(y=faminc_new,x=educ_category))+
 
 
 ####make a histogram
-ggplot(cces,aes(x=faminc_new))+
-  geom_histogram()
+ggplot(cces,aes(x=faminc_new, group=educ))+
+  geom_histogram(fill=NA, color="black")
 
 ####make a density plot
 ggplot(cces,aes(x=faminc_new))+

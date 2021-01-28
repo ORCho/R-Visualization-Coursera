@@ -4,7 +4,7 @@
 #install.packages("tidyverse")
 
 ###load the tidyverse functions #### Do this everytime you want to use tidyverse commands
-install.packages("tidyverse")
+##install.packages("tidyverse")
 library(tidyverse)
 
 ####Use read_csv instead of read.csv
@@ -21,7 +21,6 @@ cces <- read_csv("week_2tidyverse_cces_sample_coursera.csv")
 class(cces)
 
 vignette("tibble")
-
 ##### if you need to switch back and forth between tibble and dataframe for some reason
 
 cces_dataframe <- as.data.frame(cces)
